@@ -23,20 +23,16 @@ while operacao != "8":
     if operacao == "1" or operacao == "CADASTRAR CLIENTE":
 
         nome = input("Digite o nome do cliente: ")
-        senha = input("Digite a senha: ")
-
-        listaCliente.append([nome, senha])
+        listaCliente.append([nome])
 
         print("Cliente cadastrado")
 
     elif operacao == "2" or operacao == "CADASTRAR CONTA":
 
         nome = input("Digite o nome do cliente: ")
-        senha = input("Digite a senha do cliente: ")
-
         for cliente in listaCliente:
 
-            if cliente[0] == nome and cliente[1] == senha:
+            if cliente[0] == nome:
 
                 listaConta.append([proximaConta, nome, 0])
 
@@ -47,7 +43,7 @@ while operacao != "8":
                 break
 
         else:
-            print("Cliente não encontrado ou senha incorreta")
+            print("Cliente não encontrado")
 
     elif operacao == "3" or operacao == "LISTAR CONTAS":
 
