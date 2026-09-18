@@ -52,6 +52,7 @@ while operacao != "8":
     elif operacao == "3" or operacao == "LISTAR CONTAS":
 
         if len(listaConta) > 0:
+            print(f"O total de contas cadastradas são: {len(listaConta)}")
 
             for conta in listaConta:
                 print("--------------------")
